@@ -15,7 +15,7 @@
     lsd tree bat tldr
     zellij
     fzf
-    fastfetch
+
     yazi
     kitty
     vim
@@ -34,8 +34,10 @@
     tree-sitter
 
     # Programming Languages
+    agda
+    coq
     gcc
-    #lean4 
+    # lean4 
     elan z3
     #go gopls
     #rustc cargo rust-analyzer rustfmt openssl pkg-config
@@ -43,7 +45,15 @@
     haskellPackages.ghc       
     haskellPackages.cabal-install
     haskellPackages.haskell-language-server 
-
+    (haskellPackages.ghcWithPackages (p:
+       
+       with p; [
+       
+       cabal-install
+       
+       GLUT
+       
+   ])) 
     haskellPackages.xmonad
     haskellPackages.xmonad-contrib
     # haskellPackages.xmonad-eval
