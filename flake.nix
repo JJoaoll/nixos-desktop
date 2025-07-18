@@ -2,11 +2,11 @@
   description = "A simple NixOS flake";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url        = "github:NixOS/nixpkgs/nixos-unstable";
+    # xmonad-contrib.url = "github:xmonad/xmonad-contrib";
   };
 
   outputs = { self, nixpkgs, ... }@inputs: {
-    # The host with the hostname `my-nixos` will use this configuration
     nixosConfigurations.draell-nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [

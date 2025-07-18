@@ -1,0 +1,16 @@
+{ xmonad-contexts, config, pkgs, ... }:
+
+{
+  # services.xserver.enable = true;  # Habilita o X server
+  # services.xserver.displayManager.startx.enable = true;  # Habilita o startx
+  services.xserver.windowManager.xmonad = {
+    enable = true;
+    enableContribAndExtras = true;
+    flake = {
+      enable = true;
+      compiler = "ghc947";
+    };
+    config = builtins.readFile ./monad.hs;
+    enableConfiguredRecompile = true;
+  };
+}
