@@ -58,7 +58,7 @@
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable            = true;
@@ -141,6 +141,6 @@
   # -----------------------------------------------------------------
   
   # system.stateVersion = "unstable"; # Did you read the comment?
-  # system.stateVersion = "25.11"; # Did you read the comment?
+  system.stateVersion = "25.11"; # Did you read the comment?
 
 }

@@ -20,6 +20,10 @@
       sddm.wayland.enable = false;
     };    
 
+
+    desktopManager.plasma6.enable = true;
+    desktopManager.gnome.enable = true;
+
     xserver = {
       enable = true;
       videoDrivers = [ "nvidia" ];
@@ -33,9 +37,6 @@
       ];
 
 
-      # desktopManager.plasma5.enable = true;
-
-      desktopManager.gnome.enable = true;
 
     };
   };
