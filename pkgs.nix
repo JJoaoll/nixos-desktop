@@ -5,7 +5,8 @@
   # $ nix search wget
   # Packages
   # -----------------------------------------------------------------
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = with pkgs; [ 
+
     kmonad 
     xterm dmenu
     evtest
@@ -102,11 +103,11 @@
     obs-studio
   ]; 
   
-  fonts.packages = with pkgs; [
-    jetbrains-mono
-    noto-fonts-cjk-sans
-    (nerdfonts.override { fonts = [ "FiraCode" "Hack" ]; })
-  ];
+  # fonts.packages = with pkgs; [
+  #   jetbrains-mono
+  #   noto-fonts-cjk-sans
+  #   (nerdfonts.override { fonts = [ "FiraCode" "Hack" ]; })
+  # ];
 
 
 }

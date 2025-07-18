@@ -7,7 +7,7 @@
 
   outputs = { self, nixpkgs, ... }@inputs: {
     # The host with the hostname `my-nixos` will use this configuration
-    nixosConfigurations.my-nixos = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.draell-nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
         ./configuration.nix
